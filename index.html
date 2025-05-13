@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para o Amor da Minha Vida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <audio id="musicaFundo" autoplay loop>
+        <source src="musica/nossa-musica.mp3" type="audio/mpeg">
+       
+      </audio>      
+      <h1>💖 Para o Amor da minha Vida 💖</h1>
+
+      <button onclick="tocarMusica()" id="botaoMusica">🎶 Tocar música</button>
+
+    <p id="contador">Estou ao seu lado há ...</p>
+    
+    <div class="carrossel">
+      <img id="imagem" src="imagens/foto1.jpg" alt="Foto nossa">
+      <div class="botoes">
+        <button onclick="mudarImagem(-1)">⟨</button>
+        <button onclick="mudarImagem(1)">⟩</button>
+      </div>
+    </div>
+
+    <p class="mensagem">Obrigado por estar sempre ao meu lado, e por melhorar meus dias, sou completamente apaixonado por você. Eu te amo, infinitamente 💘</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
