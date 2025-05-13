@@ -1,23 +1,22 @@
-// DATA DO INÍCIO DO RELACIONAMENTO (altere aqui)
-const dataInicio = new Date("2022-11-13");
-
-// Atualiza contador
 function atualizarContador() {
+  const dataInicio = new Date("2022-11-13"); 
   const agora = new Date();
   const diff = agora - dataInicio;
 
-  const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const anos = Math.floor(dias / 365);
-  const diasRestantes = dias % 365;
+  const diasTotais = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const anos = Math.floor(diasTotais / 365);
+  const diasRestantesAno = diasTotais % 365;
+  const semanas = Math.floor(diasRestantesAno / 7);
+  const dias = diasRestantesAno % 7;
 
   const contador = document.getElementById("contador");
-  contador.textContent = `Há ${anos} anos e ${diasRestantes} dias, conheci o amor da minha vida 💖`;
+  contador.textContent = `Há ${anos} anos, ${semanas} semanas e ${dias} dias, conheci o amor da minha vida 💖`;
 }
 
-atualizarContador();
-setInterval(atualizarContador, 1000 * 60 * 60); // Atualiza a cada hora
 
-// Carrossel de imagens
+atualizarContador();
+setInterval(atualizarContador, 1000 * 60 * 60); 
+
 const imagens = [
   "imagens/foto1.jpg",
   "imagens/foto2.jpg",
