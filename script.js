@@ -20,7 +20,7 @@ setInterval(atualizarContador, 1000 * 60 * 60);
 const imagens = [
   "imagens/foto1.jpg",
   "imagens/foto2.jpg",
-  "imagens/foto3.jpg",
+  "imagens/foto3.png",
   "imagens/foto4.jpg",
   "imagens/foto5.jpg",
   "imagens/foto6.jpg",
