@@ -21,23 +21,31 @@ setInterval(atualizarContador, 1000 * 60 * 60);
 
 
 const imagens = [
-  "imagens/foto1.jpg",
-  "imagens/foto2.jpg",
-  "imagens/foto3.png",
-  "imagens/foto4.jpg",
-  "imagens/foto5.jpg",
-  "imagens/foto6.jpg",
-  "imagens/foto7.jpg",
-  "imagens/foto8.jpg",
-  "imagens/foto9.jpg",
-  "imagens/foto10.jpg"
+  'foto1.jpg',
+  'foto2.jpg',
+  'foto3.png',
+  'foto4.jpg',  // ← essa é a PNG
+  'foto5.jpg',
+  'foto6.jpg',
+  'foto7.jpg',
+  'foto8.jpg',
+  'foto9.jpg',
+  'foto10.jpg'
 ];
 
 let indiceAtual = 0;
 
 function mudarImagem(direcao) {
-  indiceAtual = (indiceAtual + direcao + imagens.length) % imagens.length;
-  document.getElementById("imagem").src = imagens[indiceAtual];
+  indiceAtual += direcao;
+
+  if (indiceAtual < 0) {
+    indiceAtual = imagens.length - 1;
+  } else if (indiceAtual >= imagens.length) {
+    indiceAtual = 0;
+  }
+
+  const imagem = document.getElementById('imagem');
+  imagem.src = `imagens/${imagens[indiceAtual]}`;
 }
 function tocarMusica() {
     const musica = document.getElementById("musicaFundo");
