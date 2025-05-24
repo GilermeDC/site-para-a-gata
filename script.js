@@ -7,7 +7,7 @@ function atualizarContador() {
   const anos = Math.floor(diasTotais / 365);
   const diasRestantesAno = diasTotais % 365;
 
-  const meses = Math.floor(diasRestantesAno / 30.44); // Média de dias por mês
+  const meses = Math.floor(diasRestantesAno / 30.44); 
   const diasRestantesMes = diasRestantesAno % 30.44;
 
   const semanas = Math.floor(diasRestantesMes / 7);
@@ -16,7 +16,6 @@ function atualizarContador() {
   const contador = document.getElementById("contador");
   contador.textContent = `Há ${anos} anos, ${meses} meses, ${semanas} semanas e ${dias} dias, conheci o amor da minha vida 💖`;
 }
-
 atualizarContador();
 setInterval(atualizarContador, 1000 * 60 * 60);
 
